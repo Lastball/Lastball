@@ -233,3 +233,6 @@ div {display:block;margin:0px;}
 .adb, .sbb {position:relative;text-align:center;display:inline-block;width:16px;}
 .adb {right:-7px;top:-1px;}
 .sbb {left:-7px;font-size:15px;}
+
+.paytog {display:none;height:calc(100% - 64px);overflow-x:hidden;overflow-y:auto;}
+.ptb {width:calc(100% - 8px);font-size:18px;height:2em;margin:4px;border:1px solid #eee;color:gray;border-left:0px solid transparent;border-right:0px solid transparent;}

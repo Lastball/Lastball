@@ -146,3 +146,41 @@ checkForm = function() {
 }
 
 
+
+togpay = function(w,e) {
+	
+	document.getElementById('total2').value = document.getElementById('total').value;
+	document.getElementById('total3').value = document.getElementById('total').value;
+	
+	document.getElementById('imd2').innerHTML = document.getElementById('imd').innerHTML;
+	document.getElementById('imd3').innerHTML = document.getElementById('imd').innerHTML;
+	
+	document.getElementById('cname2').value = document.getElementById('cname').value;
+	document.getElementById('cname3').value = document.getElementById('cname').value;
+	
+	
+		document.getElementsByClassName('ptb')[0].style.display = "none";
+		document.getElementsByClassName('ptb')[1].style.display = "none";
+		document.getElementsByClassName('ptb')[2].style.display = "none";
+		
+		
+	switch(w) {
+		case "eft":
+		document.getElementById('fnb_p').style.display = "none";
+		document.getElementById('nedbank_p').style.display = "none";
+		document.getElementById('eft_p').style.display = "block";
+		break;
+		case "fnb":
+		document.getElementById('eft_p').style.display = "none";
+		document.getElementById('nedbank_p').style.display = "none";
+		document.getElementById('fnb_p').style.display = "block";
+		break;
+		case "nedbank":
+		document.getElementById('fnb_p').style.display = "none";
+		document.getElementById('eft_p').style.display = "none";
+		document.getElementById('nedbank_p').style.display = "block";
+		break;
+}
+}
+
+
