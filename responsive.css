@@ -13,3 +13,16 @@ localStorage.setItem('wa',document.getElementById('waracc').value);
 localStorage.setItem('wdeets','saved');
 }
 });
+
+
+quant = function(mat) {
+	cv = document.getElementById('quan').innerHTML;
+	
+
+	if(mat=="minus" && cv>1) {
+		cv = cv-1;
+	} else if(mat=="plus" && cv<10){
+		cv++;
+	}
+	document.getElementById('quan').innerHTML = cv;
+}

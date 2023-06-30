@@ -5,6 +5,9 @@
 <html style="max-width:100%;overflow-x:hidden;">
 <head>
 <script src="main.js"></script>
+<script>
+window.unitPrice = 11000;
+</script>
 <meta name="viewport" content="initial-scale=1, width=device-width">
 <meta name="description" content="Electro Sun is a registered South African enterprise. We import & assemble the components of our products. Our workspace is inspected along with the quality of our products. Each product we sell is SABS approved & is safe for its intended use. Our enterprise number is 2022/434262/07. ">
 <link rel="stylesheet" href="style.css">
@@ -37,6 +40,11 @@
 </div>
 <div class="cheb lr">
 <button class="buynow" onclick="location='#checkout';">Buy Now</button>
+<button class="buynow qu">
+<font class="sbb" tabindex="2" onclick="quant('minus')">-</font>
+<font class="qb">Quantity: <font class="quan" id="quan">1</font></font>
+<font class="adb" tabindex="2" onclick="quant('plus')">+</font>
+</button>
 <!--<button class="rev"><a href="https://web.facebook.com/story.php?story_fbid=441254244764678&id=100066403195500&_rdc=1&_rdr">Facebook Reviews</a></button>-->
 </div>
 </div>
@@ -137,7 +145,7 @@ The tracking number you've entered is not on the system, please double check the
 <input type="email" id="email" placeholder="Email Address" class="cform"onchange="this.style.border = '';">
 <input type="address" id="address" placeholder="Street Address" class="cform"onchange="this.style.border = '';">
 <input type="city" id="city" placeholder="City or Town" class="cform"onchange="this.style.border = '';">
-<select id="region" class="cform" onchange="this.style.border = ''; eo=this.value.split(':'); op = eo[0]; op = op.toLowerCase(); if(op=='gauteng'){ document.querySelector('#total').value ='Total Amount Due: R11100'; document.querySelector('#nmd').innerHTML ='2 business days'; document.querySelector('#imd').innerHTML ='the next business day';} else {document.querySelector('#total').value ='Total Amount Due: R11300'; document.querySelector('#nmd').innerHTML ='4 business days'; document.querySelector('#imd').innerHTML ='3 business days';} document.querySelector('#refer').value += eo[1];">
+<select id="region" class="cform" onchange="this.style.border = ''; eo=this.value.split(':'); op = eo[0]; op = op.toLowerCase(); if(op=='gauteng'){ window.delfee =100; document.querySelector('#nmd').innerHTML ='2 business days'; document.querySelector('#imd').innerHTML ='the next business day';} else { window.delfee =300; document.querySelector('#nmd').innerHTML ='4 business days'; document.querySelector('#imd').innerHTML ='3 business days';} document.querySelector('#refer').value += eo[1];">
 <option selected disabled value="">Province</option>
 <option value="Gauteng:1">Gauteng</option>
 <option value="Western Cape:2">Western Cape</option>
@@ -161,7 +169,7 @@ The tracking number you've entered is not on the system, please double check the
 <input type="text" value="Account Number: " class="cform" id="waracc" readonly>
 <input type="text" value="Bank Name: " class="cform" id="warbank" readonly>
 <input type="text" value="Total Amount Due: R" id="total" class="cform" readonly>
-<input type="text" id="refer" value="Payment Reference: XDC" class="cform" readonly>
+<input type="text" id="refer" value="Payment Reference: ESC" class="cform" readonly>
 <input type="text" id="cname" value="Customer" class="cform" readonly>
 <p class="noti nice"><br/>Your proof of payment can be sent to <a href="mailto: info@electrosun.co.za" class="skyli"> info@electrosun.co.za</a> or to <a href="tel:0791482961" class="skyli"> 0791482961</a><br/><br/>Immediate payment (recommended) - The delivery (due in <font id="imd"></font>) will be processed immediately.<br/>Normal payment - The delivery (Due in <font id="nmd"></font>) will be processed upon us receiving the funds.</p>
 

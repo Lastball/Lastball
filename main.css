@@ -225,3 +225,11 @@ div {display:block;margin:0px;}
 #prov {text-transform:capitalize;}
 
 }
+
+
+.qu {background-color:white;border:1px solid lightgray;color:gray;}
+.qb {font-weight:normal;}
+.quan {font-weight:bold;}
+.adb, .sbb {position:relative;text-align:center;display:inline-block;width:16px;}
+.adb {right:-7px;top:-1px;}
+.sbb {left:-7px;font-size:15px;}

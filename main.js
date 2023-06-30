@@ -133,6 +133,7 @@ checkForm = function() {
 	if(ry>0) {
 		
 	} else {
+		document.getElementById('total').value = "Total Amount Due: R" + (unitPrice*document.getElementById('quan').innerHTML+delfee);
 		 loading();
 		 rers = document.querySelector('#region').value.split(':');
 		 rer = rers[0];
