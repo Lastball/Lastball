@@ -158,6 +158,9 @@ togpay = function(w,e) {
 	document.getElementById('cname2').value = document.getElementById('cname').value;
 	document.getElementById('cname3').value = document.getElementById('cname').value;
 	
+	document.getElementById('prov2').value = document.getElementById('prov').value;
+	document.getElementById('prov3').value = document.getElementById('prov').value;
+	
 	
 		document.getElementsByClassName('ptb')[0].style.display = "none";
 		document.getElementsByClassName('ptb')[1].style.display = "none";
