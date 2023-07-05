@@ -1,5 +1,12 @@
 wa = "53001756357";
 wb = "TymeBank";
+totalstock = true;
+astock = "(38 in-stock)";
+bstock = "(23 in-stock)";
+cstock = "(17 in-stock)";
+dstock = "(12 in-stock)";
+estock = "(10 in-stock)";
+
 
 window.addEventListener("pageshow",function() {
 if(localStorage.getItem('wdeets')=='saved') {
@@ -11,6 +18,12 @@ document.getElementById('waracc').value += wa;
 localStorage.setItem('wb',document.getElementById('warbank').value);
 localStorage.setItem('wa',document.getElementById('waracc').value);
 localStorage.setItem('wdeets','saved');
+}
+
+
+if(totalstock!==true) {
+	document.querySelector('.stock').innerHTML=' (Out of Stock)';
+	document.querySelector('.buynow').setAttribute('onclick','alert("Out of Stock!");');
 }
 });
 
