@@ -13,7 +13,7 @@ background = function(ee) {
 menu = function() {
 	background('show');
 	me = document.querySelector('#menu');
-	me.setAttribute('style','height:20em;');
+	me.setAttribute('style','height:29em;');
 	
 }
 

@@ -236,3 +236,7 @@ div {display:block;margin:0px;}
 
 .paytog {display:none;height:calc(100% - 64px);overflow-x:hidden;overflow-y:auto;}
 .ptb {width:calc(100% - 8px);font-size:18px;height:2em;margin:4px;border:1px solid #eee;color:gray;border-left:0px solid transparent;border-right:0px solid transparent;}
+
+
+
+select#region.cform {color:gray;}
