@@ -26,7 +26,7 @@ window.unitPrice = 7500;
 <div id="content">
 <div class="shopnow">
 <div class="prod lr">
-<h1>Reviews <font class="stock">(4)</font></h1>
+<h1>Reviews <font class="stock">(5)<!--stars code--></font></h1>
 <h5><font class="excl">Customers Experience & Feedback</font></h5>
 </div>
 <div class="cheb lr">
@@ -42,7 +42,7 @@ Only took a day for my order to arrive, so far so good, my husband and I have be
 <br/>
 <br/>
 <img src="proof_00012.jpg" style="height:64px;">
-
+<font class="rated">★★★★★<font class="unrated"></font></font>
 </p>
 <br/>
 <h4 style="color:#555;">Andre Rheder <font class="stock" style="float:right;margin-right:2em;font-size:10px;">(17 April 2023)</font></h4>
@@ -52,6 +52,7 @@ Got the package last night, exactly 2 days after I ordered. I have equipment to 
 <br/>
 <br/>
 <img src="proof_00011.jpg" style="height:64px;">
+<font class="rated">★★★★<font class="unrated">☆</font></font>
 
 </p>
 <br/>
@@ -62,6 +63,7 @@ Thought I share this beautiful photo of my kids watching TV during loadshedding,
 <br/>
 <br/>
 <img src="proof_00015.jpg" style="height:64px;">
+<font class="rated">★★★★★<font class="unrated"></font></font>
 
 </p>
 </div>
@@ -73,16 +75,18 @@ We decided to use ours in the RV we recently bought, I will be giving further fe
 <br/>
 <br/>
 <img src="proof_00014.jpg" style="height:64px;">
+<font class="rated">★★★★<font class="unrated">☆</font></font>
 
 </p>
 <br/>
 <h4 style="color:#555;">Joe Harrison <font class="stock" style="float:right;margin-right:2em;font-size:10px;">(01 March 2023)</font></h4>
 <p>
 <b style="font-weight:normal;color:dimgray;">Product Purchased: MT3001 </b><br/>
-The weight is a bit much for an old man to move around but I seem to have got exactly what was advertised. Was getting tired of this bloody loadshedding, I'd recommend this product everyone in this country. 
+The weight is a bit much for an old man to move around but I seem to have got exactly what was advertised. Was getting tired bloody loadshedding, I'd recommend this product everyone in this country. 
 <br/>
 <br/>
 <img src="proof_00013.jpg" style="height:64px;">
+<font class="rated">★★★<font class="unrated">☆☆</font></font>
 
 </p>
 </div>
@@ -147,7 +151,7 @@ The tracking number you've entered is not on the system, please double check the
 
 <div id="checkout">
 <div class="slide1" id="formin">&nbsp;<br/>
-<p class="noti">Please complete the from below.</p><br/>
+<p class="noti">Please complete the form below.</p><br/>
 <input type="name" id="fullname" placeholder="Full Name" class="cform"onchange="this.style.border = '';cc=this.value.toUpperCase();document.querySelector('#cname').value = 'Customer: ' + cc;">
 <input type="reference" id="address" placeholder="Purchase Reference Number" class="cform"onchange="this.style.border = '';">
 <input type="camera" id="dob" placeholder="Attach Photos" class="cform"onchange="this.style.border = '';" onfocus="this.setAttribute('type','file');" accept="image/*" multiple>
@@ -160,6 +164,7 @@ The tracking number you've entered is not on the system, please double check the
 <option value="Limpopo:5">MT9001</option>
 </select>
 <input type="text" id="zipcode" placeholder="Elaborate Here" class="cform" style="height:96px;" onchange="this.style.border = '';">
+<input type="number" id="starring" placeholder="1 - 5 Rating" class="cform" onchange="this.style.border = ''; if(this.value<1 || this.value>5){ alert('Please enter a rating out of 5.'); this.value='';}">
 <p class="noti">We will verify your purchase reference number first, then your review will posted. We appreciate your feedback.</p>
 <button class="cbut blub" onclick="alert('We appreciate your feedback & support. Your review will appear shortly.');location='/';">Submit Review</button>
 <button class="cbut blab" onclick="location='#'">Return</button><p>&nbsp;</p>

@@ -240,3 +240,5 @@ div {display:block;margin:0px;}
 
 
 select#region.cform {color:gray;}
+.rated {color:#ccbb00;display:block;}
+.unrated {color:black;display:inline;}
