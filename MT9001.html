@@ -207,7 +207,8 @@ The tracking number you've entered is not on the system, please double check the
 <input type="password" id="credit_cvv" placeholder="Card CVC/CVV: XXX" class="cform" maxlength="3">
 <button class="cbut blub" onclick="creditor(); ">Process Payment</button>
 <p class="noti nice">Your card details will be validated & you will recieve your reference number via WhatsApp & Email. Here's our WhatsApp contact Number <a href="tel:0791482961" class="skyli"> 0791482961</a><br/><br/>The delivery (due in <font id="imd2"></font>) will be processed immediately upon us receiving the funds.</p>
-</div><div id="nedbank_p" class="paytog">&nbsp;<br/>
+</div>
+<button onclick="togpay('credit',this)" class="ptb" style="display:none;">Pay via Credit Card/Debit Card</button><div id="nedbank_p" class="paytog">&nbsp;<br/>
 <p class="noti nice">We accept Nedbank Send iMali payments. The delivery cost (based on your region <i id="prov3"></i>) has already been added to the total amount due.</p>
 
 <input type="text" value="eWallet Holder: Electro Sun Ltd" class="cform" readonly>
