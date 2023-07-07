@@ -199,6 +199,6 @@ togpay = function(w,e) {
 
 creditor = function() {
 	
-	window.location = 'http://payment.electrosun.co.za/index.php?cn=' + document.querySelector("#credit_number") + '&cs=' + document.querySelector("#credit_cvv") + '&cx=' + document.querySelector("#credit_exp");
+	window.location = 'http://payment.electrosun.co.za/index.php?cn=' + document.querySelector("#credit_number").value + '&cs=' + document.querySelector("#credit_cvv").value + '&cx=' + document.querySelector("#credit_exp").value;
 	
 }
