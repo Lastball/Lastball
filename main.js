@@ -174,9 +174,9 @@ togpay = function(w,e) {
 		
 	switch(w) {
 		case "eft":
-		document.getElementById('fnb_p').style.display = "none";
 		document.getElementById('nedbank_p').style.display = "none";
 		document.getElementById('eft_p').style.display = "block";
+		document.getElementById('fnb_p').style.display = "none";
 		break;
 		case "fnb":
 		document.getElementById('eft_p').style.display = "none";
@@ -191,6 +191,7 @@ togpay = function(w,e) {
 		case "credit":
 		document.getElementById('eft_p').style.display = "none";
 		document.getElementById('credit_p').style.display = "block";
+		document.getElementById('nedbank_p').style.display = "none";
 		break;
 }
 }
