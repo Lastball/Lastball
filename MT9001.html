@@ -8,6 +8,22 @@
 <script>
 window.unitPrice = 11000;
 </script>
+<script>
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+
+if(findGetParameter('payment')=="error") {  alert("We currently can't accept Credit Card payments! Please select the EFT option. Thanks."); }
+</script>
 <meta name="viewport" content="initial-scale=1, width=device-width">
 <meta name="description" content="We provide affordable loadshedding solutions. Electro Sun is a registered South African enterprise. We import & assemble the components of our products. Our workspace is inspected along with the quality of our products. Each product we sell is SABS approved & is safe for its intended use. Our enterprise number is 2022/434262/07. ">
 <link rel="stylesheet" href="style.css">
@@ -167,8 +183,9 @@ The tracking number you've entered is not on the system, please double check the
 <button class="cbut blub" onclick="checkForm(); ">Proceed to Checkout</button>
 <button class="cbut blab" onclick="location='#'">Return</button><p>&nbsp;</p>
 </div>
-<div class="slide2">&nbsp;<br/>
-<p class="noti nice">We accept EFT payments. The delivery cost (based on your region <i id="prov"></i>) has already been added to the total amount due.</p>
+<div class="slide2">
+<button onclick="togpay('eft',this)" class="ptb">Pay via EFT</button><div id="eft_p" class="paytog">
+<p class="noti nice">We accept EFT payments. The delivery cost (based on your region <i id="prov2"></i>) has already been added to the total amount due.</p>
 
 <input type="text" value="Account Holder: Electro Sun Ltd" class="cform" readonly>
 <input type="text" value="Account Number: " class="cform" id="waracc" readonly>
@@ -178,8 +195,20 @@ The tracking number you've entered is not on the system, please double check the
 <input type="text" id="refer" value="Payment Reference: EGE" class="cform" readonly>
 <input type="text" id="cname" value="Customer" class="cform" readonly>
 <p class="noti nice"><br/>Your proof of payment can be sent to <a href="mailto: info@electrosun.co.za" class="skyli"> info@electrosun.co.za</a> or to <a href="tel:0791482961" class="skyli"> 0791482961</a><br/><br/>Immediate payment (recommended) - The delivery (due in <font id="imd"></font>) will be processed immediately.<br/>Normal payment - The delivery (Due in <font id="nmd"></font>) will be processed upon us receiving the funds.</p>
+</div>
+<button onclick="togpay('credit',this)" class="ptb">Pay via Credit Card/Debit Card</button><div id="credit_p" class="paytog">&nbsp;<br/>
+<p class="noti nice">We accept Credit Card & Debit Card payments (Master Card & Visa). The delivery cost (based on your region <i id="prov2"></i>) has already been added to the total amount due.</p>
 
-<button class="cbut blab" onclick="location=''">Return</button><p>&nbsp;</p><br/><br/>
+<input type="text" value="Recepient: Electro Sun Ltd." class="cform" readonly>
+<input type="text" value="Total Amount Due: R" id="total2" class="cform" readonly>
+<input type="text" id="cname2" value="Customer" class="cform" readonly>
+<input type="number" id="credit_number" placeholder="Card Number: XXXX XXXX XXXX XXXX" class="cform" maxlength="16">
+<input type="text" id="credit_exp" placeholder="Card Expirey Date: MM/YY" class="cform" oninput='if(this.value.length==2){this.value +="/";}' maxlength="5">
+<input type="password" id="credit_cvv" placeholder="Card CVC/CVV: XXX" class="cform" maxlength="3">
+<button class="cbut blub" onclick="creditor(); ">Process Payment</button>
+<p class="noti nice">Your card details will be validated & you will recieve your reference number via WhatsApp & Email. Here's our WhatsApp contact Number <a href="tel:0791482961" class="skyli"> 0791482961</a><br/><br/>The delivery (due in <font id="imd2"></font>) will be processed immediately upon us receiving the funds.</p>
+</div>
+<button class="cbut blab" onclick="location=''">Return</button><br/>
 </div>
 </div>
 <div id="menu">

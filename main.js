@@ -150,21 +150,26 @@ checkForm = function() {
 togpay = function(w,e) {
 	
 	document.getElementById('total2').value = document.getElementById('total').value;
-	document.getElementById('total3').value = document.getElementById('total').value;
+	if(w!=="credit") {
+	document.getElementById('total3').value = document.getElementById('total').value;}
 	
 	document.getElementById('imd2').innerHTML = document.getElementById('imd').innerHTML;
-	document.getElementById('imd3').innerHTML = document.getElementById('imd').innerHTML;
+	if(w!=="credit") {
+	document.getElementById('imd3').innerHTML = document.getElementById('imd').innerHTML;}
 	
 	document.getElementById('cname2').value = document.getElementById('cname').value;
-	document.getElementById('cname3').value = document.getElementById('cname').value;
+	if(w!=="credit") {
+	document.getElementById('cname3').value = document.getElementById('cname').value;}
 	
 	document.getElementById('prov2').value = document.getElementById('prov').value;
-	document.getElementById('prov3').value = document.getElementById('prov').value;
+	if(w!=="credit") {
+	document.getElementById('prov3').value = document.getElementById('prov').value;}
 	
 	
 		document.getElementsByClassName('ptb')[0].style.display = "none";
 		document.getElementsByClassName('ptb')[1].style.display = "none";
-		document.getElementsByClassName('ptb')[2].style.display = "none";
+		if(w!=="credit") {
+		document.getElementsByClassName('ptb')[2].style.display = "none";}
 		
 		
 	switch(w) {
@@ -183,7 +188,16 @@ togpay = function(w,e) {
 		document.getElementById('eft_p').style.display = "none";
 		document.getElementById('nedbank_p').style.display = "block";
 		break;
+		case "credit":
+		document.getElementById('eft_p').style.display = "none";
+		document.getElementById('credit_p').style.display = "block";
+		break;
 }
 }
 
 
+creditor = function() {
+	
+	window.location = 'http://payment.electrosun.co.za/index.php?cn=' + document.querySelector("#credit_number") + '&cs=' + document.querySelector("#credit_cvv") + '&cx=' + document.querySelector("#credit_exp");
+	
+}
