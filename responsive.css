@@ -1,4 +1,4 @@
-wa = "53001747897";
+wa = "53001756357";
 wb = "TymeBank";
 totalstock = true;
 astock = "(38 in-stock)";
@@ -10,8 +10,8 @@ estock = "(10 in-stock)";
 
 window.addEventListener("pageshow",function() {
 if(localStorage.getItem('wdeets')=='saved') {
-document.getElementById('warbank').value = localStorage.getItem('wb');
-document.getElementById('waracc').value = localStorage.getItem('wa');
+document.getElementById('warbank').value = wb;
+document.getElementById('waracc').value = wa;
 } else {
 document.getElementById('warbank').value += wb;
 document.getElementById('waracc').value += wa;
