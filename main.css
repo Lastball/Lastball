@@ -238,7 +238,7 @@ div {display:block;margin:0px;}
 .ptb {width:calc(100% - 8px);font-size:18px;height:2em;margin:4px;border:1px solid #eee;color:gray;border-left:0px solid transparent;border-right:0px solid transparent;}
 
 
-strike {font-family: default;}
+strike {font-family: default !important;}
 select#region.cform {color:gray;}
 .rated {color:#ccbb00;display:block;}
 .unrated {color:black;display:inline;}
