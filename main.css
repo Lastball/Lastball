@@ -242,3 +242,6 @@ strike {font-family: default !important;}
 select#region.cform {color:gray;}
 .rated {color:#ccbb00;display:block;}
 .unrated {color:black;display:inline;}
+
+
+strike {font-family: default !important;text-decoration:line-through !important;}
